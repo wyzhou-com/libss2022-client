@@ -1,0 +1,12 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: ss2022-client
+Description: @PROJECT_DESCRIPTION@
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lss2022_client
+Libs.private: -lm
+Requires.private: wolfssl libblake3
+Cflags: -I${includedir}
